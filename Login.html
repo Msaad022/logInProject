@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>login</title>
+  </head>
+  <body>
+    <!-- start header -->
+    <div class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">Mega</a>
+        <div id="name-user">
+          <p></p>
+          <span>logout</span>
+        </div>
+        <ul class="main-nav">
+          <li><a href="index.html#articals">Articals</a></li>
+          <li><a href="index.html#gallery">Gallery</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li>
+            <a href="#"> Other Links</a>
+            <div class="mega-menu">
+              <div class="image">
+                <img src="img/megamenu.png" alt="" />
+              </div>
+              <ul class="links">
+                <li>
+                  <a href="Testimonials.html"
+                    ><i class="far fa-comments fa-fw"></i> Testimonials</a
+                  >
+                </li>
+                <li>
+                  <a href="Team.html"
+                    ><i class="far fa-user fa-fw"></i> Team Members</a
+                  >
+                </li>
+                <li>
+                  <a href="Events.html"
+                    ><i class="far fa-calendar-alt fa-fw"></i> Events</a
+                  >
+                </li>
+              </ul>
+              <ul class="links">
+                <li>
+                  <a href="Login.html"
+                    ><i class="fas fa-sign-in-alt"></i> LogIn</a
+                  >
+                </li>
+                <li>
+                  <a href="Register.html"
+                    ><i class="far fa-clipboard fa-fw"></i> Register</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- end header -->
+    <!-- start Login -->
+    <article class="article-login">
+      <section class="content-login">
+        <div class="title-login">
+          <h1>Welcome!</h1>
+          <p>sign in by entering the information below</p>
+        </div>
+        <div class="content-inputs">
+          <form class="form-page-login" action="#">
+            <input type="text"     id="username" autocomplete="off"    placeholder="User name">
+            <input type="password"  id="password" autocomplete="off"  placeholder="Password">
+            <input type="submit" value="Continue" id="submitlogin">
+          </form>
+        </div>
+        <div class="ather-page">
+          <p>Dont have an account? <span><a href="Register.html">Create one here.</a></span></p>
+        </div>
+      </section>
+      <section class="img-view">
+        <div class="perent-view">
+          <img src="img/login.png" alt="">
+        </div>
+      </section>
+    </article>
+    <!-- end Login -->
+    <!-- start footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="box">
+          <h3>Mohamed Saad</h3>
+          <ul class="social">
+            <li>
+              <a href="#" class="facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="youtube">
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+          </ul>
+          <p class="text">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus
+            nulla rem, dignissimos iste aspernatur
+          </p>
+        </div>
+        <div class="box">
+          <ul class="links">
+            <li><a href="#">Important Link 1</a></li>
+            <li><a href="#">Important Link 2</a></li>
+            <li><a href="#">Important Link 3</a></li>
+            <li><a href="#">Important Link 4</a></li>
+            <li><a href="#">Important Link 5</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <div class="line">
+            <i class="fas fa-map-marker-alt fa-fw"></i>
+            <div class="info">
+              Egypt, Giza, Inside The Sphinx, Room Number 220
+            </div>
+          </div>
+          <div class="line">
+            <i class="far fa-clock fa-fw"></i>
+            <div class="info">Business Hours: From 10:00 To 18:00</div>
+          </div>
+          <div class="line">
+            <i class="fas fa-phone-volume fa-fw"></i>
+            <div class="info">
+              <span>+20123456789</span>
+              <span>+20198765432</span>
+            </div>
+          </div>
+        </div>
+        <div class="box footer-gallery">
+          <img src="img/gallery-01.png" alt="" />
+          <img src="img/gallery-02.png" alt="" />
+          <img src="img/gallery-03.jpg" alt="" />
+          <img src="img/gallery-04.png" alt="" />
+          <img src="img/gallery-05.jpg" alt="" />
+          <img src="img/gallery-06.png" alt="" />
+        </div>
+      </div>
+      <p class="copyright">Made With &lt;3 By Mohamed</p>
+    </div>
+    <!-- end footer -->
+    <script>
+      document.getElementById('submitlogin').addEventListener('click',function (event){
+        return validateHandler('login','username','password',event)
+      })
+    </script>
+    <script src="js/validation.js"></script>
+    <script>
+      var nameUser = document.querySelector("#name-user");
+      
+      window.onload = function () {
+        
+        // shar data with login database
+        let i
+        for (i = 0; i < sessionStorage.length; i++) {
+          let key = sessionStorage.key(i);
+          let value = sessionStorage.getItem(key);
+          localStorage.setItem(key ,value)  
+        }
+
+        // cheeck login
+        let getName = sessionStorage.getItem('_login') 
+        
+        if(getName){
+          
+          nameUser.querySelector("p").innerText = getName
+          nameUser.style.display = 'flex';
+      
+          nameUser.querySelector("span").addEventListener("click" ,function (){
+            
+            sessionStorage.removeItem("_login")
+            location.reload(); 
+      
+          })
+      
+        }else{
+          nameUser.style.display = 'none';
+        }
+
+      }
+    </script>
+  </body>
+</html>

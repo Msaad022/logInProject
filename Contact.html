@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>events</title>
+    <title>contact</title>
   </head>
   <body>
     <!-- start header -->
@@ -21,7 +21,7 @@
         <ul class="main-nav">
           <li><a href="index.html#articals">Articals</a></li>
           <li><a href="index.html#gallery">Gallery</a></li>
-          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#features">Features </a></li>
           <li>
             <a href="#"> Other Links</a>
             <div class="mega-menu">
@@ -71,48 +71,42 @@
       </div>
     </div>
     <!-- end header -->
-    <!-- start events -->
-    <div class="events" id="events">
-      <div class="dots dots-up"></div>
-      <div class="dots dots-down"></div>
-      <h2 class="main-title">Latest Events</h2>
-      <div class="container">
-        <img src="img/events.png" alt="" />
-        <div class="info">
-          <div class="time">
-            <div class="unit">
-              <span class="days">195</span>
-              <span>Days</span>
-            </div>
-            <div class="unit">
-              <span class="hours">10</span>
-              <span>Hours</span>
-            </div>
-            <div class="unit">
-              <span class="minutes">09</span>
-              <span>Minutes</span>
-            </div>
-            <div class="unit">
-              <span class="seconds">57</span>
-              <span>Seconds</span>
-            </div>
-          </div>
-          <h2 class="title">Tech Masters Event 2021</h2>
-          <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero
-            tenetur doloremque iusto ut adipisci quam ratione aliquam excepturi
-            nulla in harum, veritatis porro
-          </p>
+    <article class="article-contact">
+      <div class="space"></div>
+      <section class="section-contact">
+        <div class="title-contact">
+          <h1>Contact Us</h1>
         </div>
-        <div class="subscribe">
-          <form action="">
-            <input type="email" placeholder="Enter Your Email" />
-            <input type="submit" value="Subscribe" />
+        <div class="containt-form">
+          <form class="form-page-contact" action="#" method="POST">
+            <span>required</span>
+            <input type="text" id="name" placeholder="Your Name" />
+            <span>required</span>
+            <input type="email" id="email" placeholder="Your Email" />
+            <span
+              >Please, enter the email address where you wish to receive our
+              answer. If you are a registered user of flaticon, please include
+              the email address you used when you registered if possible to help
+              us locate your account as soon as possible.
+            </span>
+            <input type="text" id="subject" placeholder="Subject" />
+            <textarea
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Write us a message..."
+            ></textarea>
+            <div class="send-contact">
+              <div class="perent-send">
+                <button type="submit" id="submit">
+                  Send <img src="img/icon/bx_bx-mail-send.svg" alt="" />
+                </button>
+              </div>
+            </div>
           </form>
         </div>
-      </div>
-    </div>
-    <!-- end events -->
+      </section>
+    </article>
     <!-- start footer -->
     <div class="footer">
       <div class="container">
@@ -180,7 +174,12 @@
       <p class="copyright">Made With &lt;3 By Mohamed</p>
     </div>
     <!-- end footer -->
+    <script>
+      document.getElementById('submit').addEventListener('click',function (event){
+        return validateHandler(event, 'name','email','subject',"message")
+      })
+    </script>
+    <script src="js/contact.js"></script>
     <script src="js/login.js"></script>
-
   </body>
 </html>

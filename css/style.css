@@ -884,6 +884,130 @@ a {
 /* End Artical */
 
 /* End style for LogIn Page And SignUp Page -----------------------------*/
+/* Start style for About Page */
+
+/* StartArtical */
+.article-about {
+  width: 100%;
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-items: center;
+  height: 660px;
+}
+.article-about > .content-about {
+  width: 80%;
+  padding-top: 85px;
+}
+.article-about > .content-about > div {
+  margin-bottom: 50px;
+  width: 85%;
+}
+.article-about > .content-about > p {
+  font-weight: 600;
+}
+.article-about > .content-about > .line-about h1,
+.article-about > .content-about > .line-team h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+.article-about > .content-about > .line-team h2 {
+  font-size: 25px;
+}
+.article-about > .content-about > .line-team p > span {
+  color: #4971d6;
+}
+
+/* End Artical */
+
+/* End style for About Page -----------------------------------*/
+/* Start style for Contact Us Page */
+
+/* Start Artical */
+
+.article-contact {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding-top: 50px;
+  margin-bottom: 50px;
+}
+.article-contact > section > .title-contact > h1 {
+  font-size: 30px;
+}
+.article-contact > section form {
+  padding-top: 20px;
+  width: 55%;
+}
+.article-contact > section form > span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.article-contact > section form > input,
+.article-contact > section form > textarea {
+  background-color: #ececec;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 90%;
+  height: 41px;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+.article-contact > section form > span:nth-child(5) {
+  width: 90%;
+  font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 35px;
+  color: #5f5f5f;
+}
+.article-contact > section form > input[type="email"] {
+  margin-bottom: 10px;
+}
+.article-contact > section form > input[name="consubject"] {
+  margin-bottom: 35px;
+}
+.article-contact > section form > textarea {
+  max-width: 90%;
+  min-width: 90%;
+  min-height: 190px;
+  padding-top: 14px;
+}
+.article-contact > section form > .send-contact {
+  padding-top: 30px;
+  padding-right: 40px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article-contact > section form > .send-contact > .perent-captsha {
+  width: 280px;
+}
+.article-contact > section form > .send-contact > .perent-captsha > img {
+  width: 100%;
+}
+.article-contact > section form > .send-contact button {
+  width: 75px;
+  border: none;
+  outline: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0px;
+  font-weight: 500;
+  background-color: #f4d160;
+  border-radius: 5px;
+  box-shadow: 0px 3px 4px rgb(0 0 0 / 25%);
+  cursor: pointer;
+}
+.article-contact > section form > .send-contact button img {
+  width: 17px;
+  margin-left: 4px;
+}
+/* End Artical */
+
+/* End style for Contact Us Page -----------------------------------*/
 /* Start Footer */
 .footer {
   background-color: #191919;
